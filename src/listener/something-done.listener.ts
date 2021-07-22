@@ -4,7 +4,7 @@ import { SomethingDoneEvent } from '../events/something.event';
 
 @Injectable()
 export class EventListener {
-  @OnEvent('*.notDone')
+  @OnEvent('something.done')
   handleSomethingDoneEvent(event: SomethingDoneEvent): void {
     console.log('\nSomething has been done so Im gonna handle it:');
     console.log('Data to handle: ', event);
